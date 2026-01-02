@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | 전자기계융합 & 반도체 공정 전문가</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <style>
+        :root {
+            --primary-color: #00d4ff;
+            --bg-dark: #0a0b10;
+            --card-bg: #161b22;
+            --text-light: #e6edf3;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            margin: 0;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0; width: 100%;
+            background: rgba(10, 11, 16, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            border-bottom: 1px solid #30363d;
+        }
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+
+        .nav-content { display: flex; justify-content: space-between; align-items: center; }
+
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            margin-left: 2rem;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover { color: var(--primary-color); }
+
+        /* Hero Section */
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: radial-gradient(circle at center, #112240 0%, #0a0b10 100%);
+        }
+
+        .hero-title { font-size: 3rem; margin-bottom: 10px; }
+        .hero-subtitle { font-size: 1.5rem; color: var(--primary-color); margin-bottom: 30px; }
+
+        /* Section Styling */
+        section { padding: 100px 0; border-bottom: 1px solid #30363d; }
+        h2 { font-size: 2rem; border-left: 5px solid var(--primary-color); padding-left: 15px; margin-bottom: 40px; }
+
+        /* Grid Layout */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #30363d;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-color);
+        }
+
+        .tag {
+            display: inline-block;
+            background: #1f2937;
+            color: var(--primary-color);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+        }
+
+        /* Footer */
+        footer { text-align: center; padding: 50px 0; color: #8b949e; }
+
+        /* Interaction */
+        .fade-in { opacity: 0; transform: translateY(20px); transition: 0.8s all ease-out; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="container nav-content">
+            <div style="font-weight: bold; font-size: 1.2rem;">ENGINEER_PORTFOLIO</div>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#specialization">Specialization</a>
+                <a href="#projects">Projects</a>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <h1 class="hero-title">홍길동 (Gildong Hong)</h1>
+        <p class="hero-subtitle">전자기계융합공학 & 첨단반도체공정장비 전공</p>
+        <p>하드웨어 설계와 반도체 공정 제어의 브릿지 역할을 수행하는 엔지니어입니다.</p>
+    </header>
+
+    <div class="container">
+        <section id="about" class="fade-in">
+            <h2>About Me</h2>
+            <p>전자기계융합공학을 기반으로 기계적 메커니즘과 전자 제어 시스템을 통합적으로 이해하고 있습니다. 특히 <strong>첨단반도체공정장비융합전공</strong>을 통해 반도체 제조 공정의 전반적인 이해와 장비 최적화 역량을 쌓았습니다.</p>
+        </section>
+
+        <section id="specialization" class="fade-in">
+            <h2>Specialization</h2>
+            <div class="grid">
+                <div class="card">
+                    <i class="fas fa-microchip" style="font-size: 2rem; color: var(--primary-color);"></i>
+                    <h3>마이크로프로세서 실험</h3>
+                    <p>MCU 제어 알고리즘 설계, 임베디드 시스템 프로그래밍 및 센서 데이터 처리 최적화 실습 수료.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-bolt" style="font-size: 2rem; color: var(--primary-color);"></i>
+                    <h3>전자회로 실험</h3>
+                    <p>아날로그 및 디지털 회로 설계, 회로 시뮬레이션 및 PCB 레이아웃 분석 역량 보유.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-industry" style="font-size: 2rem; color: var(--primary-color);"></i>
+                    <h3>반도체 공정 장비</h3>
+                    <p>반도체 8대 공정 및 장비 유지보수, 진공 기술, 클린룸 공정 제어에 대한 전문 지식.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="fade-in">
+            <h2>Key Projects</h2>
+            <div class="grid">
+                <div class="card">
+                    <span class="tag">Embedded System</span>
+                    <h3>마이크로프로세서 제어 시스템</h3>
+                    <p>실시간 데이터 피드백을 활용한 정밀 모터 제어 시스템 구현 프로젝트.</p>
+                </div>
+                <div class="card">
+                    <span class="tag">Circuit Design</span>
+                    <h3>고효율 전원 공급 회로 설계</h3>
+                    <p>전자회로 실험을 통한 노이즈 필터링 및 안정적 전압 출력 시스템 설계.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Engineering Portfolio. All rights reserved.</p>
+        <p>Email: example@email.com | LinkedIn: @yourprofile</p>
+    </footer>
+
+    <script>
+        // Scroll Animation Script
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
